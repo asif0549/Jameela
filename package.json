@@ -1,0 +1,12 @@
+{
+  "name": "happy-birthday-jameela",
+  "version": "1.0.0",
+  "description": "Happy Birthday Jameela Surprise Web App",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve ."
+  },
+  "keywords": ["birthday", "surprise", "jameela", "web-app"],
+  "author": "",
+  "license": "MIT"
+}

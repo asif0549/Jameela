@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Jameela 🎂</title>
+  <meta name="description" content="A special birthday surprise made with love for Jameela!">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800;900&family=Great+Vibes&family=Poppins:ital,wght@0,400;0,600;1,300;1,600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Ambient Photo Background Layer -->
+  <div class="ambient-bg" id="ambientBg" style="background-image: url('assests/WhatsApp%20Image%202026-08-16%20at%2023.32.58.jpeg');"></div>
+  <div class="ambient-overlay"></div>
+
+  <!-- Fullscreen Particle Canvas -->
+  <canvas id="bgCanvas"></canvas>
+
+  <!-- Verification Modal -->
+  <div id="modalOverlay" class="modal-overlay">
+    <div id="modalCard" class="modal-card">
+      <div class="card-icon">💖</div>
+      <h2 id="modalTitle">Secret Question ❤️</h2>
+      <p id="modalMessage">Are you Jameela?</p>
+      
+      <div class="button-group" id="questionButtons">
+        <button id="btnYes" class="btn btn-primary">Yes, I am! 💖</button>
+        <button id="btnNo" class="btn btn-secondary">No, somebody else</button>
+      </div>
+
+      <div class="access-denied hidden" id="deniedView">
+        <div class="lock-icon">🔒</div>
+        <h3>Access Denied</h3>
+        <p>Sorry, this surprise is only for Jameela 💖</p>
+        <button id="btnRetry" class="btn btn-outline">Try Again</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Celebration Container -->
+  <main id="celebrationContainer" class="celebration-container hidden">
+    <div class="content-wrapper">
+
+      <!-- 3D Luxury Photo Showcase Card -->
+      <div class="photo-frame-wrapper" id="photoFrame">
+        <div class="photo-card" id="photoCard">
+          <img src="assests/WhatsApp%20Image%202026-08-16%20at%2023.32.58.jpeg" alt="Jameela" class="hero-photo" id="heroPhoto">
+          <div class="photo-overlay">
+            <span class="tap-hint">✨ Click for Full View ✨</span>
+          </div>
+        </div>
+        <div class="photo-halo"></div>
+      </div>
+
+      <!-- Typography -->
+      <h1 id="titleText" class="title-text"></h1>
+      <h2 id="nameText" class="name-text"></h2>
+      <p id="subtitleText" class="subtitle-text">May your day be filled with endless happiness, love & bright smiles ❤️</p>
+      
+      <!-- Interactive Action Bar -->
+      <div class="action-bar">
+        <button id="soundToggle" class="btn-sound" title="Toggle Music">
+          <span id="soundIcon">🎵</span>
+          <span class="sound-text">Play Song</span>
+          <span class="eq-visualizer">
+            <span class="eq-bar"></span>
+            <span class="eq-bar"></span>
+            <span class="eq-bar"></span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Photo Lightbox Popup Modal -->
+  <div id="lightboxModal" class="lightbox-modal hidden">
+    <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+    <div class="lightbox-container">
+      <button class="lightbox-close" id="lightboxClose" title="Close">&times;</button>
+      <div class="lightbox-frame">
+        <img src="assests/WhatsApp%20Image%202026-08-16%20at%2023.32.58.jpeg" alt="Jameela Birthday Special" class="lightbox-img">
+        <div class="lightbox-shine"></div>
+      </div>
+      <p class="lightbox-caption">Happy Birthday to the most wonderful person! 🌟💖💫</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
