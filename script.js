@@ -282,6 +282,22 @@ document.addEventListener('DOMContentLoaded', () => {
     modalOverlay.classList.add('hidden');
     celebrationContainer.classList.remove('hidden');
     animationStarted = true;
+    
+    // Automatically play music on user gesture
+    try {
+      if (!audioCtx) {
+        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      }
+      if (audioCtx.state === 'suspended') {
+        audioCtx.resume();
+      }
+      if (!isPlaying) {
+        playSong();
+      }
+    } catch (err) {
+      console.warn('Audio auto-play error:', err);
+    }
+
     startCelebration();
   });
 
